@@ -10,8 +10,6 @@ module NetSuite
         @object = object
       end
 
-      private
-
       def request(credentials={})
         NetSuite::Configuration.connection({}, credentials).call(:add, :message => request_body)
       end
